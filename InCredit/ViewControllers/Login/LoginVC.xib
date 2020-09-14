@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="InCredit" customModuleProvider="target">
+            <connections>
+                <outlet property="btnFBLogin" destination="Rxn-6P-2wb" id="LBo-7o-K2V"/>
+                <outlet property="btnLogin" destination="35b-TS-VdY" id="39B-HQ-3Bf"/>
+                <outlet property="consHeigthLogo" destination="78z-EE-S7I" id="FWX-4h-qdc"/>
+                <outlet property="imgLogo" destination="b6S-lI-9UG" id="Lb3-50-bmi"/>
+                <outlet property="tfEmail" destination="Ys4-SF-9X0" id="Rau-I1-QGD"/>
+                <outlet property="tfPassword" destination="iN6-rp-d61" id="phS-qr-eGR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="InCredit logo" translatesAutoresizingMaskIntoConstraints="NO" id="b6S-lI-9UG">
+                    <rect key="frame" x="136.5" y="79" width="141" height="146"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="141" id="2CO-cj-2bp"/>
+                        <constraint firstAttribute="height" constant="146" id="78z-EE-S7I"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="InCredit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfJ-sd-OPD">
+                    <rect key="frame" x="142.5" y="235" width="129.5" height="43.5"/>
+                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The most accurate credit scoring app" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUe-dz-lL9">
+                    <rect key="frame" x="64" y="288.5" width="286.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ys4-SF-9X0">
+                    <rect key="frame" x="40" y="324" width="334" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="qfL-Q8-M3e"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="2Il-F6-seB"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iN6-rp-d61">
+                    <rect key="frame" x="40" y="374" width="334" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="9CK-PR-900"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="zQK-On-KSI"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5M-9n-u9D">
+                    <rect key="frame" x="244" y="434" width="130" height="32"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="Forgot password?">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ifR-Yh-cZx">
+                    <rect key="frame" x="40" y="481" width="334" height="90"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35b-TS-VdY" userLabel="Login">
+                            <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
+                            <state key="normal" title="Login"/>
+                            <connections>
+                                <action selector="btnLoginClicked:" destination="-1" eventType="touchUpInside" id="2ob-rf-cCc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rxn-6P-2wb" userLabel="LoginFB" customClass="LoginFB" customModule="InCredit" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="50" width="334" height="40"/>
+                            <state key="normal" title="LoginFB"/>
+                            <connections>
+                                <action selector="btnFBLoginClicked:" destination="-1" eventType="touchUpInside" id="KBy-1b-xvc"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="IQE-YC-SST"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" name="BackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ifR-Yh-cZx" firstAttribute="trailing" secondItem="Ys4-SF-9X0" secondAttribute="trailing" id="7yi-bR-IOO"/>
+                <constraint firstItem="Ys4-SF-9X0" firstAttribute="top" secondItem="jUe-dz-lL9" secondAttribute="bottom" constant="15" id="84g-Mi-qFX"/>
+                <constraint firstItem="iN6-rp-d61" firstAttribute="trailing" secondItem="Ys4-SF-9X0" secondAttribute="trailing" id="DsS-du-apK"/>
+                <constraint firstItem="Ys4-SF-9X0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="IF7-2x-6vA"/>
+                <constraint firstItem="b6S-lI-9UG" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="NIK-rG-Npw"/>
+                <constraint firstItem="ifR-Yh-cZx" firstAttribute="leading" secondItem="Ys4-SF-9X0" secondAttribute="leading" id="Oyv-6G-VdT"/>
+                <constraint firstItem="ifR-Yh-cZx" firstAttribute="top" secondItem="T5M-9n-u9D" secondAttribute="bottom" constant="15" id="REd-J9-ap2"/>
+                <constraint firstItem="iN6-rp-d61" firstAttribute="top" secondItem="Ys4-SF-9X0" secondAttribute="bottom" constant="5" id="VAw-wP-LuW"/>
+                <constraint firstItem="QfJ-sd-OPD" firstAttribute="top" secondItem="b6S-lI-9UG" secondAttribute="bottom" constant="10" id="VKm-Rt-YXp"/>
+                <constraint firstItem="T5M-9n-u9D" firstAttribute="trailing" secondItem="iN6-rp-d61" secondAttribute="trailing" id="hpm-zk-WfS"/>
+                <constraint firstItem="T5M-9n-u9D" firstAttribute="top" secondItem="iN6-rp-d61" secondAttribute="bottom" constant="15" id="iik-IA-N7r"/>
+                <constraint firstItem="jUe-dz-lL9" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="kzk-4p-8lY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ys4-SF-9X0" secondAttribute="trailing" constant="40" id="nkR-ae-uUw"/>
+                <constraint firstItem="iN6-rp-d61" firstAttribute="leading" secondItem="Ys4-SF-9X0" secondAttribute="leading" id="oxI-vS-AGR"/>
+                <constraint firstItem="b6S-lI-9UG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="35" id="rE4-sG-rLY"/>
+                <constraint firstItem="QfJ-sd-OPD" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="vGd-2x-r92"/>
+                <constraint firstItem="jUe-dz-lL9" firstAttribute="top" secondItem="QfJ-sd-OPD" secondAttribute="bottom" constant="10" id="w9h-Cv-8T3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="130.58035714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="InCredit logo" width="306" height="318"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.27799999713897705" green="0.76099997758865356" blue="0.6940000057220459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

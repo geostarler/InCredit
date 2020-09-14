@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TabBar" customModule="InCredit" customModuleProvider="target">
+            <connections>
+                <outlet property="viewTabBar" destination="iN0-l3-epB" id="Dlu-7X-dVs"/>
+                <outletCollection property="tabBarList" destination="ADo-5g-XJ9" collectionClass="NSMutableArray" id="QdF-5a-xrG"/>
+                <outletCollection property="tabBarList" destination="Bf4-9u-qJF" collectionClass="NSMutableArray" id="Vyz-6H-5NM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4t3-FD-67A">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADo-5g-XJ9" customClass="TabBarButton" customModule="InCredit" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="202" height="75"/>
+                            <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="creditxanh"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bf4-9u-qJF" customClass="TabBarButton" customModule="InCredit" customModuleProvider="target">
+                            <rect key="frame" x="212" y="0.0" width="202" height="75"/>
+                            <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="historyxanh"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="4t3-FD-67A" secondAttribute="bottom" id="HZz-oJ-bqk"/>
+                <constraint firstItem="4t3-FD-67A" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NgI-bw-Oyp"/>
+                <constraint firstItem="4t3-FD-67A" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="T6H-Wa-Po5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4t3-FD-67A" secondAttribute="trailing" id="dVD-ma-8TA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="121.73913043478262" y="465.06696428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="creditxanh" width="512" height="316"/>
+        <image name="historyxanh" width="416" height="389"/>
+    </resources>
+</document>
