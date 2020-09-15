@@ -48,6 +48,12 @@
 		D474ECE9250FD3D3004BD114 /* MoneyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D474ECE8250FD3D3004BD114 /* MoneyModel.swift */; };
 		D474ECEB250FD3E0004BD114 /* NumberPerMonthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D474ECEA250FD3E0004BD114 /* NumberPerMonthModel.swift */; };
 		D474ECED250FD4A1004BD114 /* ChartAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D474ECEC250FD4A1004BD114 /* ChartAPI.swift */; };
+		D474ECF125102A4B004BD114 /* PhoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D474ECEF25102A4B004BD114 /* PhoneVC.swift */; };
+		D474ECF225102A4B004BD114 /* PhoneVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D474ECF025102A4B004BD114 /* PhoneVC.xib */; };
+		D474ECF625103625004BD114 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D474ECF425103625004BD114 /* HistoryVC.swift */; };
+		D474ECF725103625004BD114 /* HistoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D474ECF525103625004BD114 /* HistoryVC.xib */; };
+		D474ECFB2510391E004BD114 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D474ECF92510391E004BD114 /* HistoryCell.swift */; };
+		D474ECFC2510391E004BD114 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D474ECFA2510391E004BD114 /* HistoryCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +126,12 @@
 		D474ECE8250FD3D3004BD114 /* MoneyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyModel.swift; sourceTree = "<group>"; };
 		D474ECEA250FD3E0004BD114 /* NumberPerMonthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberPerMonthModel.swift; sourceTree = "<group>"; };
 		D474ECEC250FD4A1004BD114 /* ChartAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartAPI.swift; sourceTree = "<group>"; };
+		D474ECEF25102A4B004BD114 /* PhoneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVC.swift; sourceTree = "<group>"; };
+		D474ECF025102A4B004BD114 /* PhoneVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneVC.xib; sourceTree = "<group>"; };
+		D474ECF425103625004BD114 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
+		D474ECF525103625004BD114 /* HistoryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryVC.xib; sourceTree = "<group>"; };
+		D474ECF92510391E004BD114 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		D474ECFA2510391E004BD114 /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
 		EE40B6607E09A6736B5915A5 /* Pods_InCreditTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InCreditTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -263,6 +275,7 @@
 		D466A54E250A9ABF00F90FEC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D474ECF825103901004BD114 /* HistoryCell */,
 				D466A595250AA10600F90FEC /* TabBar */,
 				D466A54F250A9ABF00F90FEC /* BaseView.swift */,
 				D474ECE0250FC2A4004BD114 /* LoginFB.swift */,
@@ -304,6 +317,8 @@
 		D466A559250A9AC000F90FEC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D474ECF32510360E004BD114 /* HistoryVC */,
+				D474ECEE25102A26004BD114 /* PhoneVC */,
 				D466A592250A9F7900F90FEC /* MainNavi */,
 				D466A588250A9E6000F90FEC /* Login */,
 				D466A589250A9E6700F90FEC /* Home */,
@@ -418,6 +433,33 @@
 			path = TabBarButton;
 			sourceTree = "<group>";
 		};
+		D474ECEE25102A26004BD114 /* PhoneVC */ = {
+			isa = PBXGroup;
+			children = (
+				D474ECEF25102A4B004BD114 /* PhoneVC.swift */,
+				D474ECF025102A4B004BD114 /* PhoneVC.xib */,
+			);
+			path = PhoneVC;
+			sourceTree = "<group>";
+		};
+		D474ECF32510360E004BD114 /* HistoryVC */ = {
+			isa = PBXGroup;
+			children = (
+				D474ECF425103625004BD114 /* HistoryVC.swift */,
+				D474ECF525103625004BD114 /* HistoryVC.xib */,
+			);
+			path = HistoryVC;
+			sourceTree = "<group>";
+		};
+		D474ECF825103901004BD114 /* HistoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				D474ECF92510391E004BD114 /* HistoryCell.swift */,
+				D474ECFA2510391E004BD114 /* HistoryCell.xib */,
+			);
+			path = HistoryCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -527,13 +569,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D474ECFC2510391E004BD114 /* HistoryCell.xib in Resources */,
 				D466A571250A9AC000F90FEC /* Assets.xcassets in Resources */,
 				D466A577250A9AC000F90FEC /* Main.storyboard in Resources */,
 				D466A591250A9E9500F90FEC /* HomeVC.xib in Resources */,
+				D474ECF725103625004BD114 /* HistoryVC.xib in Resources */,
 				D466A59E250AAB9F00F90FEC /* TabBarButton.xib in Resources */,
 				D466A58D250A9E7D00F90FEC /* LoginVC.xib in Resources */,
 				D466A576250A9AC000F90FEC /* LaunchScreen.storyboard in Resources */,
 				D466A599250AA8C900F90FEC /* TabBar.xib in Resources */,
+				D474ECF225102A4B004BD114 /* PhoneVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,6 +707,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D474ECE9250FD3D3004BD114 /* MoneyModel.swift in Sources */,
+				D474ECF625103625004BD114 /* HistoryVC.swift in Sources */,
 				D474ECED250FD4A1004BD114 /* ChartAPI.swift in Sources */,
 				D466A57E250A9AC000F90FEC /* HttpRequests.swift in Sources */,
 				D466A580250A9AC000F90FEC /* Ultil.swift in Sources */,
@@ -688,7 +734,9 @@
 				D474ECE1250FC2A4004BD114 /* LoginFB.swift in Sources */,
 				D466A57C250A9AC000F90FEC /* ColorExtension.swift in Sources */,
 				D466A574250A9AC000F90FEC /* Device.swift in Sources */,
+				D474ECF125102A4B004BD114 /* PhoneVC.swift in Sources */,
 				D474ECE5250FD0EF004BD114 /* RequestChartModel.swift in Sources */,
+				D474ECFB2510391E004BD114 /* HistoryCell.swift in Sources */,
 				D466A58C250A9E7D00F90FEC /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

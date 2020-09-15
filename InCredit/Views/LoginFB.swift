@@ -23,9 +23,10 @@ class LoginFB: UIButton {
 
     func configView() {
         self.setTitleColor(UIColor(hex: 0xffffff), for: .normal)
+        self.backgroundColor = .blue
         self.titleLabel?.font = UIFont(name: fontName, size: fontSize)
         self.layer.borderWidth = 1
-        self.layer.cornerRadius = 0
+        self.layer.cornerRadius = 10
     }
 
     func login(viewController: UIViewController) {

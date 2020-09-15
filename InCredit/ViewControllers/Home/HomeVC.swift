@@ -29,7 +29,7 @@ class HomeVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        (self.navigationController as! MainNC).hiddenBtn()
+        print("data \(PHONE_NUMBER)")
         getAPI()
     }
 
@@ -40,11 +40,20 @@ class HomeVC: BaseVC {
     func setData() {
         let set1 = LineChartDataSet(entries: creaditValues, label: "Credit score")
         set1.mode = .cubicBezier
-//        set1.drawCirclesEnabled = false
-//        set1.setColor(.white)
-//        set1.fill = Fill(color: .white)
+        viewLineChart.backgroundColor = .lightGray
+        viewLineChart.rightAxis.enabled = false
+        let yAxis = viewLineChart.leftAxis
+        yAxis.labelFont = .boldSystemFont(ofSize: 12)
+        yAxis.labelTextColor = .white
+        yAxis.labelPosition = .outsideChart
+        viewLineChart.xAxis.labelPosition = .bottom
+        viewLineChart.animate(xAxisDuration: 2.5)
+        set1.drawCirclesEnabled = false
+        set1.setColor(.white)
+        set1.fill = Fill(color: .white)
+        set1.drawFilledEnabled = true
         let data = LineChartData(dataSet: set1)
-//        data.setDrawValues(false)
+        data.setDrawValues(false)
         viewLineChart.data = data
         
         let set2 = LineChartDataSet(entries: moneyValues, label: "Sum of change values")
@@ -76,8 +85,12 @@ class HomeVC: BaseVC {
         viewPieChart.data = pieChartData
     }
     
+    @IBAction func btnBackClicked(_ sender: Any) {
+        (self.navigationController as! MainNC).popViewController(animated: true)
+    }
+    
     func getAPI() {
-        HttpRequests.request(request: ChartAPI(phone: "364139627")) { [weak self] (result, response) in
+        HttpRequests.request(request: ChartAPI(phone: PHONE_NUMBER)) { [weak self] (result, response) in
             guard let weakSelf = self else { return }
             if result {
                 for creditScore in response.creditScore {

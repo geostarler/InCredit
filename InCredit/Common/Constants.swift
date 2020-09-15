@@ -11,3 +11,5 @@ import UIKit
 let KEY_ACCESS_TOKEN = "KEY_ACCESS_TOKEN"
 
 let TAB_BAR_HEIGHT: CGFloat = 75
+
+var PHONE_NUMBER = ""

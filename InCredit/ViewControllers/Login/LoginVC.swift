@@ -16,10 +16,11 @@ class LoginVC: BaseVC {
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var btnFBLogin: LoginFB!
+    @IBOutlet weak var lblError: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        (self.navigationController as! MainNC).hiddenBtn()
+        lblError.isHidden = true
         btnFBLogin.loginHandler = { [weak self] (success) in
             if success {
                (self?.navigationController as! MainNC).loginSucccess()
@@ -42,9 +43,14 @@ class LoginVC: BaseVC {
         HttpRequests.request(request: LoginAPI(email: email, password: pass)) { [weak self] (result, response) in
             guard let weakSelf = self else { return }
             if result {
-                print("server token \(response.token)")
-                UserDefaultUtils.setString(value: response.token, key: KEY_ACCESS_TOKEN)
-                (weakSelf.navigationController as! MainNC).loginSucccess()
+                if response.token.isEmpty {
+                    self?.lblError.isHidden = false
+                } else {
+                    UserDefaultUtils.setString(value: response.token, key: KEY_ACCESS_TOKEN)
+                    (weakSelf.navigationController as! MainNC).loginSucccess()
+                }
+            } else {
+                return
             }
         }
 
